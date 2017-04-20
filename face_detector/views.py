@@ -110,7 +110,7 @@ def recognize(request):
 			flags=0)
 			smiling = False if len(smile) == 0 else True
 			try:
-			   user = User.objects.get(id=identity)
+			   user = User.objects.get(id=identity[0])
 			   user = {
 			   	"first_name" : user.first_name,
 			   	"last_name" : user.last_name,
